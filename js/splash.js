@@ -76,17 +76,16 @@ function create() {
     	circ.fill(colours[i*3],colours[i*3+1],colours[i*3+2],1);
     	game.add.button(game_size*20+50+60*(i%2), 50+60*(i/2), circ, actionOnClick, this);
     }
-
+	turn_text = game.add.text(10, 40+game_size*20,"Turns Left: "+turns_left, arial);
+    click_text = game.add.text(40+game_size*20, 20,"Click These", arial);
+   	level_text = game.add.text(60+game_size*20, 40+game_size*20,"Level "+level, arial);
 }
 
 function update() {
+
 }
 
 function render() {
-	    game.add.text(10, 40+game_size*20,"Turns Left: "+turns_left, arial);
-	    game.add.text(40+game_size*20, 20,"Click These", arial);
-	   	game.add.text(60+game_size*20, 40+game_size*20,"Level "+level, arial);
-
 }
 
 function flood(index, target, replace) {
@@ -177,12 +176,15 @@ function actionOnClick(button) {
 			break;
 	}
 	turns_left-=1;
+	turn_text.text = "Turns Left: "+turns_left;
 	if (all_filled()) {
 		level++;
+		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
 		restart();
 	} else if (turns_left < 1) {
 		level = 0;
+		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
 		restart();
 	}
