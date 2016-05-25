@@ -1,0 +1,35 @@
+/* style.css - a simple style sheet */
+
+
+#box {
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 10px;
+	position: absolute;
+	background-color: white;
+	left: 0px;
+	bottom: 0px;
+	margin: 0px;
+}
+
+#food {
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 1px;
+	padding: 10px;
+	background-color: red;
+	left: 0px;
+	bottom: 0px;
+	margin: 0px;
+}
+
+.tail {
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 10px;
+	background-color: white;
+	left: 0px;
+	bottom: 0px;
+	margin: 0px;
+}
