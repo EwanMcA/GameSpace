@@ -7,7 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="icon" href="img/gs.png" type="image/x-icon">
-	<script src="js/phaser.min.js"></script>
+	<script src="js/phaser.min.js"></script> 
+	
 </head>
 <body>
 	<header>
@@ -29,7 +30,40 @@
 		</nav>
 		
 		<div>
-			<a href="index.html"> Log In </a>
+			<button id="login"> Log In </button><button id="addUser">New User</button>
+		</div> 
+		<div id="loginModal" class="modal">
+			<div class="loginContent">
+				<span class="close">x</span> 
+				<br>
+				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
+				<h1>LOGIN</h1>
+				<form name="login"> 
+				Username:<br>
+				<input type="text" name="uname"><br> 
+				Password:<br> 
+				<input type="password" name="pword"><br></form> 
+				<br>
+				<button type="submit" form="login" value="Submit">Submit</button> 
+				
+			</div>
+		</div> 
+		<div id="addModal" class="modal">
+			<div class="addContent">
+				<span class="close">x</span> 
+				<br>
+				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
+				<h1>New User</h1>
+				<form name="addUser" action="add_user.php" method="POST"> 
+				Username:<br>
+				<input type="text" name="userName"><br> 
+				Password:<br> 
+				<input type="password" name="password"><br> 
+				<br>
+				<input type="submit" value="Submit"> 
+				</form>
+				
+			</div>
 		</div>
 	</header>
 
@@ -80,7 +114,8 @@
 		</ul>
 	</div>
 
-<script src="js/loading_screen.js"></script>
+<script src="js/loading_screen.js"></script> 
+<script src="js/login.js"></script>
 
 </body>
 </html>

@@ -25,7 +25,6 @@ function loading() {
 		dot2.style.fontSize = "1.5em";
 		dot3.style.fontSize = "1em";
 	} else if (dot2.style.fontSize == "1.5em") {
-		console.log("nup")
 		dot1.style.fontSize = "1.5em";
 		dot2.style.fontSize = "1em";
 	} else if (dot1.style.fontSize == "1.5em") {
