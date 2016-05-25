@@ -95,25 +95,6 @@ function move_box() {
 	}
 }
 
-function change_direction() {
-    var event = window.event;
-    var key = event.keyCode
-    switch(key) {
-    	case 37:
-    		dir = 0;
-    		break;
-		case 38:
-			dir = 1;
-			break;
-		case 39:
-			dir = 2;
-			break;
-		case 40:
-			dir = 3;
-			break;
-    }
-}
-
 function box_death() {
 	x = half_width;
 	y = half_height;
@@ -135,6 +116,22 @@ function place_food() {
 	document.getElementById("game_window").appendChild(div);
 }
 
-document.addEventListener("keydown", change_direction);
+document.addEventListener("keydown", function(event) {
+    switch(event.keyCode) {
+    	case 37:
+    		dir = 0;
+    		break;
+		case 38:
+			dir = 1;
+			break;
+		case 39:
+			dir = 2;
+			break;
+		case 40:
+			dir = 3;
+			break;
+    }
+});
+
 setInterval(move_box, 150);
 place_food();
