@@ -30,7 +30,7 @@ function preload() {
 }
 
 function create() {
-	arial = { font: "16px Times New Roman", fill: "#FFFFFF", align: "center" };
+	arial = { font: "16px Times New Roman", fill: "#000000", align: "center" };
 	game.stage.backgroundColor = "#CCCCCC";
 	b0 = game.add.bitmapData(20, 20);
 	b0.fill(colours[0],colours[1],colours[2],1);
