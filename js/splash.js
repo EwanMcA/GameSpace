@@ -77,7 +77,7 @@ function create() {
     	game.add.button(game_size*20+50+60*(i%2), 50+60*(i/2), circ, actionOnClick, this);
     }
 	turn_text = game.add.text(10, 40+game_size*20,"Turns Left: "+turns_left, arial);
-    click_text = game.add.text(40+game_size*20, 20,"Click These", arial);
+    click_text = game.add.text(50+game_size*20, 18,"Click These", arial);
    	level_text = game.add.text(60+game_size*20, 40+game_size*20,"Level "+level, arial);
 }
 
