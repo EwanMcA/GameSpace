@@ -1,5 +1,3 @@
-<html> 
-<body>
 <?php
 	include 'database_info.php';
 
@@ -36,6 +34,4 @@
 	
 	header("location: index.html");
 	
-?>  
-</body>
-</html> 
+?>
