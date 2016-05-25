@@ -25,16 +25,16 @@ function inc() {
 setInterval(inc, 100);
 
 window.addEventListener("keydown", function(e) {
-	    switch(e.keyCode) {
-	    	case 32:
-	    	case 37:
-	    	case 38:
-	    	case 39:
-	    	case 40:
-	       		e.preventDefault();
-				break;
-	    }
-    }, false);
+    switch(e.keyCode) {
+    	case 32:
+    	case 37:
+    	case 38:
+    	case 39:
+    	case 40:
+       		e.preventDefault();
+			break;
+    }
+}, false);
 
 // game
 
@@ -96,7 +96,7 @@ function move_box() {
 }
 
 function change_direction() {
-    var event = window.event ? window.event : e;
+    var event = window.event;
     var key = event.keyCode
     switch(key) {
     	case 37:
