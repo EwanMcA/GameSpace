@@ -100,11 +100,11 @@ session_start();
 
 	<div id="left_menu">
 		<figure>
-			<a href="snake.html">
+			<a href="snake.php">
 				<img src="img/blockSnake.png" alt="BlockSnake">
 			</a>
 			<figCaption>
-				<a href="snake.html">
+				<a href="snake.php">
 					 Block Snake - by Real Games 
 				</a>
 			</figCaption>
