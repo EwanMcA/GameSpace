@@ -23,5 +23,7 @@ session_start();
 
 	$stmt->close();
 	mysqli_close($conn);
+	
+	header("location: index.php");
 
 ?>
