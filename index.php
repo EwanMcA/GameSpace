@@ -37,7 +37,7 @@ session_start();
 			<button id="login"> Log In </button><button id="addUser">New User</button>
 			<div id="user"><?php
 				if (isset($_SESSION['user'])){ 
-					echo Hello $_SESSION('user')!
+					echo "Hello ".$_SESSION['user']."!";
 				}
 				?></div>
 		</div> 
@@ -47,7 +47,7 @@ session_start();
 				<br>
 				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
 				<h1>LOGIN</h1>
-				<form name="login"> 
+				<form name="login" action="login.php" method="POST"> 
 				Username:<br>
 				<input type="text" name="uname"><br> 
 				Password:<br> 
