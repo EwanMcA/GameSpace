@@ -221,4 +221,17 @@ a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+} 
+.closeAdd {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeAdd:hover,
+.closeAdd:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
