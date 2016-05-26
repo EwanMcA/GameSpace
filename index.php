@@ -74,6 +74,7 @@ session_start();
 				        }
 				        </style>';
 				    echo "Name not available.";
+				    unset($_SESSION['errors']);
 				}
 				?>
 			</div>
