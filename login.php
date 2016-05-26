@@ -16,10 +16,8 @@ session_start();
 	$num_rows = $stmt->num_rows;
 	$stmt->bind_result($username);
 	$stmt->fetch();
-	echo $username;
 	if ($num_rows > 0) {
 		$_SESSION['user'] = $username;
-		echo "yay";
     } 
 	else if ($num_rows < 1) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -29,6 +27,6 @@ session_start();
 	$stmt->close();
 	mysqli_close($conn);
 	
-	//header("location: index.php");
+	header("location: index.php");
 
 ?>
