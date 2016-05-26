@@ -151,12 +151,10 @@ session_start();
 				<li> James: Nahhh, cuber is way better... </li>
 			</ul>
 		</div> 
-		<div class="commentForm">
-		<form action="addComments.php" method="POST">
-		<input type="text" name="comment" placeholder="Leave a comment" style="width: 85%;"/>
-		<input type="submit"/>
+		<form id="commentForm" action="addComments.php" method="POST">
+		<textarea name="comment" form="commentForm">Enter comment here...</textarea>
+		<input type="submit" value="Submit">
 		</form> 
-		</div>
 	</div>
 
 
