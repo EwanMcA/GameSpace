@@ -26,6 +26,6 @@ session_start();
 	$stmt->close();
 	mysqli_close($conn);
 	
-	header("location: index.php");
+	header("location: snake.php");
 	
 ?>
