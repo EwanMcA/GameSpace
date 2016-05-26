@@ -18,7 +18,7 @@ session_start();
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-	    $_SESSION['errors'] = array("Name is not available.");
+	    $_SESSION['errors'] = array("You Must Login to Comment.");
 	}
 
 	$stmt->close();

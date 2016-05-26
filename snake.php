@@ -152,23 +152,7 @@ session_start();
 			</ul>
 		</div> 
 		<div class="commentForm">
-		<? if (!isset($_SESSION['user'])){
-					echo '<style type="text/css">
-				        #commentForm {
-				            display: None;
-				        }
-				        </style>';
-				    echo "You Must Be Logged in to comment";
-				} 
-			else { 
-				echo '<style type="text/css">
-				        #commentForm {
-				            display: Block;
-				        }
-				        </style>';
-			}
-				?>
-		<form action="addComments.php" method="post">
+		<form action="addComments.php" method="POST">
 		<input type="text" name="comment" placeholder="Leave a comment" style="width: 85%;"/>
 		<input type="submit"/>
 		</form> 
