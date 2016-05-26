@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<!-- saved from url=(0133)https://learn.uq.edu.au/bbcswebdav/pid-1944929-dt-content-rid-9133879_1/courses/INFS3202S_6620_20698/personal_portfolio_template.html -->
 <?php
-
 session_start();
 ?>
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://learn.uq.edu.au/bbcswebdav/pid-1944929-dt-content-rid-9133879_1/courses/INFS3202S_6620_20698/personal_portfolio_template.html -->
+
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -66,7 +66,16 @@ session_start();
 				<br>
 				<input type="submit" value="Submit"> 
 				</form>
-				
+				<?php
+				if (isset($_SESSION['errors'])){
+				echo '<style type="text/css">
+				        #addModal {
+				            display: Block;
+				        }
+				        </style>';
+				    }
+				echo "Name not available.";
+				?>
 			</div>
 		</div>
 	</header>
