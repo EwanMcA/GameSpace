@@ -11,8 +11,7 @@ addUser.onclick = function() {
     addModal.style.display = "block";
 }
 span.onclick = function() {
-    loginModal.style.display = "none"; 
-	addModal.style.display = "none";
+    loginModal.style.display = "none" && addModal.style.display = "none";
 }
 window.onclick = function(event) {
     if (event.target == loginModal) {
