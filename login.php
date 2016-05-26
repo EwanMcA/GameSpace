@@ -24,7 +24,7 @@ session_start();
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	    $_SESSION['errors'] = array("Incorrect Username or Password");
 	}
-
+	$stmt->free_result();
 	$stmt->close();
 	mysqli_close($conn);
 	
