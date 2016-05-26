@@ -10,12 +10,13 @@ session_start();
 		// die("Connection failed: " . $conn->connect_error);
 	// } 
 	
-	$stmt = $conn->prepare("INSERT INTO comments(userName, comment) VALUES(?, ?, FROM_UNIXTIME(?))");
-	$stmt->bind_param("ssi", $userName, $comment, $timestamp);
+	$stmt = $conn->prepare("INSERT INTO comments(userName, comment, timestamp, game) VALUES(?, ?, FROM_UNIXTIME(?), ?)");
+	$stmt->bind_param("ssi", $userName, $comment, $timestamp, $game);
 
 	$userName = $_SESSION['user'];
 	$comment = $_POST['comment'];
 	$timestamp = time();
+	$game = "snake";
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
