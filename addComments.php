@@ -11,7 +11,7 @@ session_start();
 	// } 
 	
 	$stmt = $conn->prepare("INSERT INTO comments(userName, comment, timestamp, game) VALUES(?, ?, FROM_UNIXTIME(?), ?)");
-	$stmt->bind_param("ssi", $userName, $comment, $timestamp, $game);
+	$stmt->bind_param("ssis", $userName, $comment, $timestamp, $game);
 
 	$userName = $_SESSION['user'];
 	$comment = $_POST['comment'];
