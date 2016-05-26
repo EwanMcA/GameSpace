@@ -10,11 +10,12 @@ session_start();
 		// die("Connection failed: " . $conn->connect_error);
 	// } 
 	
-	$stmt = $conn->prepare("INSERT INTO comments(userName, comment) VALUES(?, ?, now())");
-	$stmt->bind_param("ss", $userName, $comment);
+	$stmt = $conn->prepare("INSERT INTO comments(userName, comment) VALUES(?, ?, FROM_UNIXTIME(?))");
+	$stmt->bind_param("ssi", $userName, $comment, $timestamp);
 
 	$userName = $_SESSION['user'];
-	$comment = $_POST['comment']; 
+	$comment = $_POST['comment'];
+	$timestamp = time();
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
