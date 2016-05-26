@@ -20,6 +20,7 @@ session_start();
 	$num_rows = $stmt->num_rows;
 	$stmt->bind_result($username);
 	$stmt->fetch();
+	echo $username;
 	if ($num_rows > 0) {
 		$_SESSION['user'] = $username;
 		echo "yay";
