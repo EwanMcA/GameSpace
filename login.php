@@ -12,11 +12,13 @@ session_start();
 	$userName = $_POST['userName'];
 	$password = $_POST['password'];
 	
-	$result = $stmt->execute();
-	if ($result->num_rows > 0) {
-		$_SESSION['user'] = $result;
+	$stmt->execute();
+	$stmt->bind_result($username);
+	$stmt->fetch();
+	if ($username->num_rows > 0) {
+		$_SESSION['user'] = $username;
     } 
-	else if ($result->num_rows < 1) {
+	else if ($username->num_rows < 1) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 	    $_SESSION['errors'] = array("Incorrect Username or Password");
 	}
