@@ -10,7 +10,7 @@ session_start();
 		// die("Connection failed: " . $conn->connect_error);
 	// } 
 	
-	$stmt = $conn->prepare("INSERT INTO comments(userName, comment) VALUES(?, ?)");
+	$stmt = $conn->prepare("INSERT INTO comments(userName, comment) VALUES(?, ?, now())");
 	$stmt->bind_param("ss", $userName, $comment);
 
 	$userName = $_SESSION['user'];

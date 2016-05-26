@@ -62,7 +62,7 @@ session_start();
 				            display: Block;
 				        }
 				        </style>';
-				    echo "Username or Password is Incorrect";
+				    echo $_SESSION['errors'];
 				    unset($_SESSION['errors']);
 				}
 				?>
@@ -90,7 +90,7 @@ session_start();
 				            display: Block;
 				        }
 				        </style>';
-				    echo "Name not available.";
+				    echo $_SESSION['errors'];
 				    unset($_SESSION['errors']);
 				}
 				?>
