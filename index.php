@@ -49,9 +49,9 @@ session_start();
 				<h1>LOGIN</h1>
 				<form name="login" action="login.php" method="POST"> 
 				Username:<br>
-				<input type="text" name="uname"><br> 
+				<input type="text" name="userName"><br> 
 				Password:<br> 
-				<input type="password" name="pword"><br> 
+				<input type="password" name="password"><br> 
 				<br>
 				<input type="submit" value="Submit"> 
 				</form>  

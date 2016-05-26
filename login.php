@@ -5,12 +5,8 @@ session_start();
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	if(!($stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?"))) {
-		echo "statement";
-	}
+	$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?")
 	$stmt->bind_param("ss", $userName, $password);
-
-	
 
 	$userName = $_POST['userName'];
 	$password = $_POST['password'];
