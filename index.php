@@ -35,6 +35,11 @@ session_start();
 		
 		<div id="buttons">
 			<button id="login"> Log In </button><button id="addUser">New User</button>
+			<div id="user"><?php
+				if (isset($_SESSION['user'])){ 
+					echo Hello $_SESSION('user')!
+				}
+				?></div>
 		</div> 
 		<div id="loginModal" class="modal">
 			<div class="loginContent">
@@ -46,9 +51,21 @@ session_start();
 				Username:<br>
 				<input type="text" name="uname"><br> 
 				Password:<br> 
-				<input type="password" name="pword"><br></form> 
+				<input type="password" name="pword"><br> 
 				<br>
-				<button type="submit" form="login" value="Submit">Submit</button> 
+				<input type="submit" value="Submit"> 
+				</form>  
+				<?php
+				if (isset($_SESSION['errors'])){
+					echo '<style type="text/css">
+				        #loginModal {
+				            display: Block;
+				        }
+				        </style>';
+				    echo "Username or Password is Incorrect";
+				    unset($_SESSION['errors']);
+				}
+				?>
 				
 			</div>
 		</div> 

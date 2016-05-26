@@ -1,37 +1,27 @@
 <?php
-	include 'database_info.php';
+session_start();
 
-	// Create connection
+	include 'database_info.php';
+	
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	
-		// // Check connection
-	// if ($conn->connect_error) {
-		// die("Connection failed: " . $conn->connect_error);
-	// } 
-	
-	$stmt = $conn->prepare("SELECT FROM users(userName, password) VALUES(?, ?)"); 
+
+	$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?");
 	$stmt->bind_param("ss", $userName, $password);
 
+
 	$userName = $_POST['userName'];
-	$password = $_POST['password']; 
+	$password = $_POST['password'];
 	
-	// echo "password" . $password;
-	// echo "userName" . $userName;
-	
-	// $sql = "INSERT INTO users (userName, password)
-	// VALUES ('John', 'Doe')";
-
-	// if ($conn->query($sql) === TRUE) {
-		// echo "New record created successfully";
-	// } else {
-		// echo "Error: " . $sql . "<br>" . $conn->error;
-	// }
-
-	$stmt->execute();
+	$result = $stmt->execute();
+	if ($result->num_rows > 0) {
+		$_SESSION['user'] = $result;
+    } 
+	else if ($result->num_rows < 1) {
+	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+	    $_SESSION['errors'] = array("Incorrect Username or Password");
+	}
 
 	$stmt->close();
 	mysqli_close($conn);
-	
-	header("location: index.html");
-	
+
 ?>
