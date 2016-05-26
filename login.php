@@ -5,9 +5,12 @@ session_start();
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?");
+	if(!($stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?"))) {
+		echo "statement";
+	}
 	$stmt->bind_param("ss", $userName, $password);
 
+	
 
 	$userName = $_POST['userName'];
 	$password = $_POST['password'];
@@ -19,6 +22,7 @@ session_start();
 	$stmt->fetch();
 	if ($num_rows > 0) {
 		$_SESSION['user'] = $username;
+		echo "yay";
     } 
 	else if ($num_rows < 1) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -28,6 +32,6 @@ session_start();
 	$stmt->close();
 	mysqli_close($conn);
 	
-	header("location: index.php");
+	//header("location: index.php");
 
 ?>
