@@ -54,7 +54,7 @@ session_start();
 		</div> 
 		<div id="addModal" class="modal">
 			<div class="addContent">
-				<span class="close">x</span> 
+				<span class="closeAdd">x</span> 
 				<br>
 				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
 				<h1>New User</h1>
