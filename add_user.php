@@ -24,6 +24,6 @@ session_start();
 	$stmt->close();
 	mysqli_close($conn);
 	
-	header("location: index.html");
+	header("location: index.php");
 	
 ?>
