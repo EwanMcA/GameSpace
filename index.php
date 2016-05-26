@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0133)https://learn.uq.edu.au/bbcswebdav/pid-1944929-dt-content-rid-9133879_1/courses/INFS3202S_6620_20698/personal_portfolio_template.html -->
+<?php
+
+session_start();
+?>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,11 +25,11 @@
 
 		<nav id="nav">
 			<ul class="navbar">
-				<li> <a href="shooters.html"> Shooters </a> </li>
-				<li> <a href="driving.html"> Driving </a> </li>
-				<li> <a href="index.html"> Strategy </a> </li>
-				<li> <a href="multiplayer.html"> Multiplayer </a> </li>
-				<li> <a href="strategy"> Top Games </a> </li>
+				<li> <a href="index.php"> Shooters </a> </li>
+				<li> <a href="index.php"> Driving </a> </li>
+				<li> <a href="index.php"> Strategy </a> </li>
+				<li> <a href="index.php"> Multiplayer </a> </li>
+				<li> <a href="index.php"> Top Games </a> </li>
 			</ul>
 		</nav>
 		
