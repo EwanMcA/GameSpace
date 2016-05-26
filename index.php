@@ -68,13 +68,13 @@ session_start();
 				</form>
 				<?php
 				if (isset($_SESSION['errors'])){
-				echo '<style type="text/css">
+					echo '<style type="text/css">
 				        #addModal {
 				            display: Block;
 				        }
 				        </style>';
-				    }
-				echo "Name not available.";
+				    echo "Name not available.";
+				}
 				?>
 			</div>
 		</div>
