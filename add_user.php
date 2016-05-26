@@ -1,4 +1,5 @@
 <?php
+session_start();
 	include 'database_info.php';
 
 	// Create connection
@@ -15,19 +16,10 @@
 	$userName = $_POST['userName'];
 	$password = $_POST['password']; 
 	
-	// echo "password" . $password;
-	// echo "userName" . $userName;
-	
-	// $sql = "INSERT INTO users (userName, password)
-	// VALUES ('John', 'Doe')";
-
-	// if ($conn->query($sql) === TRUE) {
-		// echo "New record created successfully";
-	// } else {
-		// echo "Error: " . $sql . "<br>" . $conn->error;
-	// }
-
-	$stmt->execute();
+	if (!$stmt->execute()) {
+	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+	    $_SESSION['errors'] = array("Name is not available.");
+	}
 
 	$stmt->close();
 	mysqli_close($conn);
