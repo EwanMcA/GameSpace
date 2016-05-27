@@ -169,6 +169,7 @@ session_start();
 
 
 <script src="js/game.js"></script> 
+<script src="js/jquery-1.12.3.min.js"></script> 
 <script src="js/comments.js"></script>
 
 </body>
