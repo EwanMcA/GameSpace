@@ -52,7 +52,7 @@ function create() {
  	squares = game.add.group();
     for (var i = 0; i < game_size; i++) {
     	for (var j = 0; j < game_size; j++) {
-			switch(parseInt(map_string.charAt(i+j))) {
+			switch(parseInt(map_string.charAt(i*game_size+j))) {
     			case 0:
     				squares.create(10+20*i,10+20*j,b0);
     				break;
