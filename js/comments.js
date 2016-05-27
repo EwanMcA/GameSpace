@@ -15,6 +15,7 @@ $(document).ready(function(){
 
 setInterval(function(){
 	$.get("getComments.php", function(result){
+		$("#commentBox").empty();
 		var table = $("#commentBox");
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
