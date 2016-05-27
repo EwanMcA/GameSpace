@@ -23,11 +23,11 @@ session_start();
 
 		<div id="nav">
 			<ul class="navbar">
-				<li> <a href="shooters.html"> Shooters </a> </li>
-				<li> <a href="driving.html"> Driving </a> </li>
+				<li> <a href="index.php"> Shooters </a> </li>
+				<li> <a href="index.php"> Driving </a> </li>
 				<li> <a href="index.php"> Strategy </a> </li>
-				<li> <a href="multiplayer.html"> Multiplayer </a> </li>
-				<li> <a href="strategy"> Top Games </a> </li>
+				<li> <a href="index.php"> Multiplayer </a> </li>
+				<li> <a href="index.php"> Top Games </a> </li>
 			</ul>
 		</div>
 				
