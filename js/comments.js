@@ -25,4 +25,4 @@ setInterval(function(){
 			th.append($("<td class='comment'>" + comments.comment + "</td>")); 
 			table.append(th);
 		}; 
-	});, 200);
+})}, 200);
