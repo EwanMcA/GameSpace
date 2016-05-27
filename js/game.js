@@ -26,7 +26,7 @@ setInterval(inc, 100);
 
 window.addEventListener("keydown", function(e) {
     switch(e.keyCode) {
-    	case 32:
+    	//case 32:
     	case 37:
     	case 38:
     	case 39:
