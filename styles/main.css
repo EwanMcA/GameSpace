@@ -162,10 +162,19 @@ a {
 	float: left; 
 	padding-bottom:5px;
 }
+table 
+{
+	margin: 20px auto;
+	border-collapse: collapse;
+}
 
+td
+{
+	border: 1px solid #333;
+	padding: 4px;
+}
 
 #comForm {
-	background-color: #EEEEEE;
 	position:relative;
 	float: bottom;
 	width: 100%;
@@ -231,14 +240,3 @@ a {
     text-decoration: none;
     cursor: pointer;
 } 
-table 
-{
-	margin: 20px auto;
-	border-collapse: collapse;
-}
-
-td
-{
-	border: 1px solid #333;
-	padding: 4px;
-}
