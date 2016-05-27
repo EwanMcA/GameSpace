@@ -26,10 +26,15 @@ var turns_left = max_turns;
 var level = 0;
 var arial;
 
+xhttp = new XMLHttpRequest();
+
 function preload() {
 }
 
 function create() {
+	xhttp.open("GET", "validateSplash.php", false);
+	xhttp.send();
+	var map_string = xhttp.responseText;
 	arial = { font: "16px Times New Roman", fill: "#000000", align: "center" };
 	game.stage.backgroundColor = "#CCCCCC";
 	b0 = game.add.bitmapData(20, 20);
@@ -79,6 +84,7 @@ function create() {
 	turn_text = game.add.text(10, 40+game_size*20,"Turns Left: "+turns_left, arial);
     click_text = game.add.text(50+game_size*20, 18,"Click These", arial);
    	level_text = game.add.text(60+game_size*20, 40+game_size*20,"Level "+level, arial);
+   	game.add.text(5,5,map_string,arial);
 }
 
 function update() {
