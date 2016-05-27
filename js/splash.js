@@ -52,7 +52,7 @@ function create() {
  	squares = game.add.group();
     for (var i = 0; i < game_size; i++) {
     	for (var j = 0; j < game_size; j++) {
-			switch(Math.floor(Math.random()*6)) {
+			switch(parseInt(map_string.charAt(i+j))) {
     			case 0:
     				squares.create(10+20*i,10+20*j,b0);
     				break;
@@ -84,7 +84,6 @@ function create() {
 	turn_text = game.add.text(10, 40+game_size*20,"Turns Left: "+turns_left, arial);
     click_text = game.add.text(50+game_size*20, 18,"Click These", arial);
    	level_text = game.add.text(60+game_size*20, 40+game_size*20,"Level "+level, arial);
-   	game.add.text(5,5,map_string,arial);
 }
 
 function update() {
