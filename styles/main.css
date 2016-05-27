@@ -230,4 +230,15 @@ a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+} 
+table 
+{
+	margin: 20px auto;
+	border-collapse: collapse;
+}
+
+td
+{
+	border: 1px solid #333;
+	padding: 4px;
 }

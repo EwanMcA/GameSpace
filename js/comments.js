@@ -8,6 +8,6 @@ $(document).ready(function(){
 			//th.append($("<td class='time'>" + comments.timestamp + "</td>"));
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
 			th.append($("<td class='comment'>" + comments.comment + "</td>"));
-		} 
-	})
+		}; 
+	});
 });
