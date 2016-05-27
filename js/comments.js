@@ -7,7 +7,8 @@ $(document).ready(function(){
 			var th = $("<tr></tr>");
 			//th.append($("<td class='time'>" + comments.timestamp + "</td>"));
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
-			th.append($("<td class='comment'>" + comments.comment + "</td>"));
+			th.append($("<td class='comment'>" + comments.comment + "</td>")); 
+			table.append(th);
 		}; 
 	});
 });
