@@ -2,12 +2,10 @@
 session_start();
 
 	if (isset($_SESSION['map'])) {
-
+		// check the posted turn-data
+		// run flood algorithm against map with these turns.
+		// set $_SESSION['current_score']
+		// then need to figure out when the user dies, /// and post the high score to database. in diff php script.
 	}
-	else {
-		
-	}
-
-
 
 ?>

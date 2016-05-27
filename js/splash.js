@@ -25,14 +25,14 @@ var max_turns = 30;
 var turns_left = max_turns;
 var level = 0;
 var arial;
-
-xhttp = new XMLHttpRequest();
+var turns;
+var xhttp = new XMLHttpRequest();
 
 function preload() {
 }
 
 function create() {
-	xhttp.open("GET", "beginSplash.php", false);
+	xhttp.open("GET", "beginSplash.php", false);  // best to wait for server instruction before building the map. 
 	xhttp.send();
 	var map_string = xhttp.responseText;
 	arial = { font: "16px Times New Roman", fill: "#000000", align: "center" };
@@ -123,11 +123,14 @@ function all_filled() {
 }
 
 function restart() {
+	xhttp.open("GET", "beginSplash.php", false); 
+	xhttp.send();
+	var map_string = xhttp.responseText;
 	turns_left = max_turns;
 	squares.removeAll();
 	for (var i = 0; i < game_size; i++) {
     	for (var j = 0; j < game_size; j++) {
-			switch(Math.floor(Math.random()*6)) {
+			switch(parseInt(map_string.charAt(i*game_size+j))) {
     			case 0:
     				squares.create(10+20*i,10+20*j,b0);
     				break;
@@ -180,14 +183,17 @@ function actionOnClick(button) {
 			flood(0,squares.children[0].key,b5);
 			break;
 	}
+	turns = turns + (((button.y-50)/60)*2).toString();
 	turns_left-=1;
 	turn_text.text = "Turns Left: "+turns_left;
 	if (all_filled()) {
+				//need to AJAX here to check turns against map.
 		level++;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
 		restart();
 	} else if (turns_left < 1) {
+			// php to update high-scores.
 		level = 0;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
