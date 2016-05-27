@@ -2,8 +2,6 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0133)https://learn.uq.edu.au/bbcswebdav/pid-1944929-dt-content-rid-9133879_1/courses/INFS3202S_6620_20698/personal_portfolio_template.html -->
-
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,7 +15,7 @@ session_start();
 <body>
 	<header>
 		<div id="banner">
-			<a href="index.html" >
+			<a href="index.php" >
 				<img id="titleIcon" alt="titleIcon" src="./img/titleIcon.png">
 			</a> 
 				<img id="bannerBG" alt="bannerImg" src="./img/banner.png" >
@@ -111,11 +109,11 @@ session_start();
 		</figure>
 		<br>
 		<figure>
-			<a href="splash.html">
+			<a href="splash.php">
 				<img src="img/cuber.jpg" alt="Splash">
 			</a>
 			<figCaption>
-				<a href="splash.html">
+				<a href="splash.php">
 					 Splash - by PuzzleWorld 
 				</a>
 			</figCaption>
