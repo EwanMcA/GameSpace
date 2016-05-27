@@ -12,7 +12,7 @@ header {
 	width: 1010px;
 	height: 150px;
 	margin: 0px auto;
-	background: purple;
+	background: #66c6f1;
 	background-image: url("../images/headerBg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -322,6 +322,7 @@ footer {
 	height: 105px;
 	margin: 10px auto 0 auto;
 	text-align: center;
+	background: #66c6f1;
 	background-image: url("../images/footerBg.png");
     background-repeat: no-repeat;
     background-size: cover;
