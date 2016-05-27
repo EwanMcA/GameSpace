@@ -159,20 +159,16 @@ a {
 
 #comments {
 	padding-bottom: 35%;
-	float: left;
-}
-
-.comment_section li {
-	list-style: none;
+	float: left; 
 	padding-bottom:5px;
 }
 
-.comment_section form {
+
+#comForm {
 	background-color: #EEEEEE;
 	position:relative;
 	float: bottom;
 	width: 100%;
-
 }
 
 .social {

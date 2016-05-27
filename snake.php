@@ -145,22 +145,31 @@ session_start();
 		
 	<div class="comment_section">
 		<div id="comments">
-			<ul>
-				<li> Sarah: This game is great! </li>
-				<li> James: Nahhh, cuber is way better... </li>
-			</ul>
+			<table>
+				<thead>
+					<tr>
+						<td>Time</td>
+						<td>User</td>
+						<td>Comment</td>
+					</tr>
+				</thead>
+				<tbody id="commentBox">
+
+				</tbody> 
+			</table>
 		</div> 
-		<div>
+		<div id="comForm">
 		<form id="commentForm" action="addComments.php" method="POST">
 		<textarea name="comment" form="commentForm">Enter comment here...</textarea> 
 		<br>
 		<input type="submit" value="Submit">
 		</form>  
-		<div>
+		</div>
 	</div>
 
 
-<script src="js/game.js"></script>
+<script src="js/game.js"></script> 
+<script src="js/comments.js"></script>
 
 </body>
 </html>
