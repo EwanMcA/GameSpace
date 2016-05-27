@@ -32,7 +32,7 @@ function preload() {
 }
 
 function create() {
-	xhttp.open("GET", "validateSplash.php", false);
+	xhttp.open("GET", "beginSplash.php", false);
 	xhttp.send();
 	var map_string = xhttp.responseText;
 	arial = { font: "16px Times New Roman", fill: "#000000", align: "center" };
