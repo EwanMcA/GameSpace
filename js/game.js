@@ -97,6 +97,11 @@ function move_box() {
 }
 
 function box_death() {
+	if (tail.length > 1) {
+		xhttp.open("GET", "addHighScore.php", false); 
+		xhttp.send();
+		console.log(xhttp.responseText);
+	}
 	x = half_width;
 	y = half_height;
 	tail = [];
@@ -105,11 +110,6 @@ function box_death() {
 	    tail_parts[0].parentNode.removeChild(tail_parts[0]);
 	}
 	document.getElementById("my_score").innerHTML = "Current Score: " + tail.length*50;
-	if (tail.length > 1) {
-		xhttp.open("GET", "addHighScore.php", false); 
-		xhttp.send();
-		console.log(xhttp.responseText);
-	}
 }
 
 function place_food() {
