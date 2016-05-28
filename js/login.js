@@ -16,6 +16,7 @@ span.onclick = function() {
     // loginModal.style.display = "none"; 
 	// addModal.style.display = "none";
 	for (var i in modals) {
+		console.log(i);
 		i.style.display = 'none';
 	}
 } 
