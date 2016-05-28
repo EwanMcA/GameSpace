@@ -14,7 +14,7 @@ $(document).ready(function(){
 });
 
 setInterval(function(){
-	$.get("getComments.php", function(result){
+	$.get("getSplashComments.php", function(result){
 		$("#commentBox").empty();
 		var table = $("#commentBox");
 		var json_result = JSON.parse(result);
