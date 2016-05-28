@@ -130,33 +130,18 @@ session_start();
 			</div>
 		</div>
 
-		<div id="scores">
-			<h2> High Scores </h2>
-			<ul id="high_scores">
-				<li><strong>The Triumphant Top 20:</strong></li>
-				<li> 1: Alex - 1050 </li>
-				<li> 2:   evilmorty - 750 </li>
-				<li> 3: joe - 600 </li>
-				<li> 4:   rickjames - 100 </li>
-				<li> 5:   Unclaimed - 000 </li>
-				<li> 6:   Unclaimed - 000 </li>
-				<li> 7:   Unclaimed - 000 </li>
-				<li> 8:   Unclaimed - 000 </li>
-				<li> 9:   Unclaimed - 000 </li>
-				<li> 9:   Unclaimed - 000 </li>
-				<li> 10: Unclaimed - 000 </li>
-				<li> 11: Unclaimed - 000 </li>
-				<li> 12: Unclaimed - 000 </li>
-				<li> 13: Unclaimed - 000 </li>
-				<li> 14: Unclaimed - 000 </li>
-				<li> 15: Unclaimed - 000 </li>
-				<li> 16: Unclaimed - 000 </li>
-				<li> 17: Unclaimed - 000 </li>
-				<li> 18: Unclaimed - 000 </li>
-				<li> 19: Unclaimed - 000 </li>
-				<li> 20: Unclaimed - 000 </li>
-				
-			</ul>
+		<div id="scores"> 
+				<table>
+					<thead>
+						<tr>
+							<td style="width:120px">User</td>
+							<td>Score</td>
+						</tr>
+					</thead>
+					<tbody id="scoresBox">
+
+					</tbody> 
+				</table>
 		</div>
 		
 		<div id="more_games">
@@ -266,7 +251,8 @@ session_start();
 	<script src="js/game.js"></script> 
 	<script src="js/jquery-1.12.3.min.js"></script> 
 	<script src="js/comments.js"></script>
-	<script src="js/login.js"></script>
+	<script src="js/login.js"></script>  
+	<script src="js/snakeScores.js"></script>
 </body>
 
 </html>
