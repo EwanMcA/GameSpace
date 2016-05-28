@@ -157,7 +157,8 @@ function restart() {
 
 // remember to send JSON for validation too..
 function actionOnClick(button) {
-	switch(((button.y-50)/60)*2) {
+	var move = ((button.y-50)/60)*2;
+	switch(move) {
 		case 0:
 			if (b0.key == squares.children[0].key.key) { return; }
 			flood(0,squares.children[0].key,b0);
@@ -183,11 +184,12 @@ function actionOnClick(button) {
 			flood(0,squares.children[0].key,b5);
 			break;
 	}
-	turns = turns + (((button.y-50)/60)*2).toString();
+	turns = turns + move.toString();
 	turns_left-=1;
 	turn_text.text = "Turns Left: "+turns_left;
 	if (all_filled()) {
-				//need to AJAX here to check turns against map.
+		xhttp.open("GET", "validateSplash.php?t="+turns, false); 
+		xhttp.send();
 		level++;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
