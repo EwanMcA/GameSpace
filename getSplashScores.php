@@ -15,5 +15,5 @@
 
 	echo json_encode($json_result); 
 	mysqli_close($conn); 
-	header('Content-Type: application/json')
+	
 ?>

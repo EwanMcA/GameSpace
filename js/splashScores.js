@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$.get("getSplashScores.php", function(result){
 		var table = $("#scoresBox");
+		console.log(result);
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
 			var comments = json_result[i]; 
