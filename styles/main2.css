@@ -1,4 +1,8 @@
-/* style.css - a simple style sheet */
+/* main.css - a simple style sheet */
+
+a {
+	text-decoration: none;
+}
 
 body {
 	font-family: "Nova Mono", "Century Gothic", Arial;
@@ -6,6 +10,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 	margin: 0;
+}
+
+footer {
+	width: 1010px;
+	height: 105px;
+	margin: 10px auto 0 auto;
+	text-align: center;
+	background: #66c6f1;
+	background-image: url("../images/footerBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding-top: 10px;
+}
+
+footer a:visited {
+	color: blue;
 }
 
 header {
@@ -16,224 +36,6 @@ header {
 	background-image: url("../images/headerBg.png");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#logo {
-	width: 100%;
-	height: 100%;
-}
-
-#header_logo{
-	height: 100px;
-	width: 250px;
-	display: inline-block;
-}
-
-#header_top {
-	height: 100px;
-	width: 750px;
-	display: inline-block;
-}
-
-#buttons {
-	float: right;
-	width: 200px;
-	margin-top: 10px;
-}
-
-nav {
-	padding: 0px 0px 5px 15px;
-}
-
-#main_content {
-	background: white;
-	height: 1300px;
-	width: 1010px;
-	margin: 10px auto 0px auto;
-}
-
-.scores {
-	float: right;
-	width: 300px;
-	height: 620px;
-    display: inline;
-	margin: 33px 7% 0px 0px;
-	text-align: center;
-}
-
-#high_scores {
-	list-style-type: none;
-	border: 4px solid red;
-	border-radius: 50px;
-	padding-top: 2px; 
-	padding-bottom: 2px; 
-	padding-left: 0;
-	text-align: center;
-	width: 100%;
-	height:80%
-}
-
-a {
-	text-decoration: none;
-}
-
-.navbar {
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-}
-
-.navbar li {
-	float: left;
-	list-style-type: none;
-}
-
-.navbar li a {
-	border-radius: 25px;
-	display: block;
-	padding: 10px;
-	margin-right: 50px;
-	color: black;
-	text-decoration: none;
-	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
-} 
-
-.navbar li a:hover {
-	background-color: #00A1E9;
-	color: white;
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-}  
-
-.account_button {
-	background-color: #00A1E9; 
-	border: 3px solid #0070a3;
-    color: white;
-	padding: 1px 7px 3px 7px;
-    text-align: center;
-    font-size: 1em; 
-	font-family: "Nova Mono", "Century Gothic", Arial;
-	border-radius: 8px;
-	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
-}
-
-.account_button:hover {
-	background-color: white;
-	color: #333333;
-	cursor: pointer;
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-} 
-
-#more_games {
-	border: 4px solid #00A1E9;
-    height: 145px;
-    width: 865px;
-    float: left;
-    border-radius: 25px;
-	margin-left: 8%;
-    margin-top: 5px;
-	font-size: 1em;
-}
-
-#more_games a:visited {
-	color: blue;
-}
-
-#more_games img:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-}
-
-#more_games figure {
-	margin: 15px 0px 0px 38px;
-	padding-bottom: 15px;
-	float: left;
-	text-align: center;
-}
-
-#more_games img {
-	width: 100px;
-	height: 100px;
-}
-
-#game_container {
-	margin-left: 5%;
-	padding: 20px;
-	float: left;
-}
-
-#my_score {
-	font-size: 1.5em;
-	margin: 10px 0px 0px 25px;
-}
-
-#game_window {
-	position: relative;
-	border: 1px solid black;
-	border-radius: 25px;
-	padding: 250px;
-	float: left;
-	display:flex;
-	z-index:2;
-}
-
-#game_window div {
-	display: inline;
-	font-size: 1em;
-}
-
-.comment_section {
-	position: relative;
-	border: 1px solid grey;
-	border-top: none;
-	border-bottom: none;
-	float: left;
-	margin: 20px 0px 0px 8%;
-	padding: 20px;
-	width: 825px;
-}
-
-#comments {
-	padding-bottom: 35%;
-	float: left; 
-	padding-bottom:5px;
-}
-
-table  {
-	margin-top: 15px;
-	width: 826px;
-	border-collapse: collapse;
-	border: none;
-}
-
-td {
-	border: 1px solid #333;
-	padding: 4px;
-	border: none;
-}
-
-table tr:nth-child(odd) {
-	background: white;
-}
-
-table tr:nth-child(even) {
-	background: #ccecfa;
-}
-
-thead {
-	font-weight: bold;
-}
-
-#comForm {
-	position:relative;
-	width: 100%;
-	text-align: center;
-}
-
-textarea[name=comment] {
-	width: 700px;
-	height: 50px;
-	float: left;
 }
 
 input[type=submit] {
@@ -254,18 +56,275 @@ input[type=submit]:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
 }
 
-.social {
+nav {
+	padding: 0px 0px 5px 15px;
+}
+
+table  {
+	margin-top: 15px;
+	width: 826px;
+	border-collapse: collapse;
+	border: none;
+}
+
+table td {
+	border: 1px solid #333;
+	padding: 4px;
+	border: none;
+}
+
+table tr:nth-child(even) {
+	background: #ccecfa;
+}
+
+table tr:nth-child(odd) {
+	background: white;
+}
+
+textarea[name=comment] {
+	width: 700px;
+	height: 50px;
+	float: left;
+}
+
+thead {
+	font-weight: bold;
+}
+
+#buttons {
+	float: right;
+	width: 200px;
+	margin-top: 10px;
+}
+
+#comForm {
+	position:relative;
+	width: 100%;
+	text-align: center;
+}
+
+#comment_section {
+	border: 1px solid grey;
+	border-top: none;
+	border-bottom: none;
+	margin: 20px 0px 40px 8%;
+	float: left;
+	padding: 20px;
+	width: 825px;
+	display: table-row;
+}
+
+#comment_wrapper {
+	background: white;
+	width: 1010px;
+	margin: 0px auto;
+	display: table;
+}
+
+#comments {
+	padding-bottom: 35%;
+	float: left; 
+	padding-bottom:5px;
+}
+
+#game_container {
+	margin-left: 5%;
+	padding: 20px;
+	float: left;
+}
+
+#game_window {
+	position: relative;
+	border: 1px solid black;
+	border-radius: 25px;
+	padding: 250px;
+	float: left;
+	display:flex;
+	z-index:2;
+}
+
+#game_window div {
+	display: inline;
+	font-size: 1em;
+}
+
+#header_logo{
+	height: 100px;
+	width: 250px;
+	display: inline-block;
+}
+
+#header_top {
+	height: 100px;
+	width: 750px;
+	display: inline-block;
+}
+
+#high_scores {
+	list-style-type: none;
+	border: 4px solid red;
+	border-radius: 50px;
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	padding-left: 0;
+	text-align: center;
+	width: 100%;
+	height:80%
+}
+
+#logo {
+	width: 100%;
+	height: 100%;
+}
+
+#main_content {
+	background: white;
+	height:870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#more_games {
+	border: 4px solid #00A1E9;
+    height: 145px;
+    width: 865px;
+    float: left;
+    border-radius: 25px;
+	margin-left: 8%;
+    margin-top: 5px;
+	font-size: 1em;
+}
+
+#more_games a:visited {
+	color: blue;
+}
+
+#more_games figure {
+	margin: 15px 0px 0px 38px;
+	padding-bottom: 15px;
+	float: left;
+	text-align: center;
+}
+
+#more_games img {
+	width: 100px;
+	height: 100px;
+}
+
+#more_games img:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+#my_score {
+	font-size: 1.5em;
+	margin: 10px 0px 0px 25px;
+}
+
+#navbar {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+#navbar li {
+	float: left;
+	list-style-type: none;
+}
+
+#navbar li a {
+	border-radius: 25px;
+	display: block;
+	padding: 10px;
+	margin-right: 50px;
+	color: black;
+	text-decoration: none;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+} 
+
+#navbar li a:hover {
+	background-color: #00A1E9;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+#scores {
+	float: right;
+	width: 300px;
+	height: 620px;
+    display: inline;
+	margin: 33px 7% 0px 0px;
+	text-align: center;
+} 
+
+#social {
 	width: 170px;
 	height: 50px;
 	margin: 0px 0px 0px 50px;
 	border-bottom: grey;
 }
 
-.social img {
+#social img {
 	padding-left:12px;
 	width: 25px;
 	height: 25px;
 }
+
+.account_button {
+	background-color: #00A1E9; 
+	border: 3px solid #0070a3;
+    color: white;
+	padding: 1px 7px 3px 7px;
+    text-align: center;
+    font-size: 1em; 
+	font-family: "Nova Mono", "Century Gothic", Arial;
+	border-radius: 8px;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+.account_button:hover {
+	background-color: white;
+	color: #333333;
+	cursor: pointer;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+.addContent, .loginContent {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;  
+	text-align: center; 
+	
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:focus, .close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.closeAdd {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeAdd:focus, .closeAdd:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
 
 .modal {
     display: none; 
@@ -280,54 +339,4 @@ input[type=submit]:hover {
 }
 
 
-.loginContent, .addContent {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 35%;  
-	text-align: center; 
-	
-}
 
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} 
-.closeAdd {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closeAdd:hover,
-.closeAdd:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} 
-
-footer {
-	width: 1010px;
-	height: 105px;
-	margin: 10px auto 0 auto;
-	text-align: center;
-	background: #66c6f1;
-	background-image: url("../images/footerBg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-footer a:visited {
-	color: blue;
-}

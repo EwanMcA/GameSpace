@@ -36,7 +36,7 @@ session_start();
 			</div> 
 		</div>
 		<nav>
-			<ul class="navbar">
+			<ul id="navbar">
 				<li> <a href="index.php"> Arcade </a> </li>
 				<li> <a href="index.php"> Strategy </a> </li>
 				<li> <a href="index.php"> Puzzle </a> </li>
@@ -74,7 +74,7 @@ session_start();
 		</div> 
 		<div id="addModal" class="modal">
 			<div class="addContent">
-				<span class="closeAdd">x</span> 
+				<span class="close">x</span> 
 				<br>
 				<img id="loginIcon" alt="titleIcon" src="./images/titleIcon.png">
 				<h1>New User</h1>
@@ -112,7 +112,7 @@ session_start();
 			<div id="my_score">
 			Current Score: 0
 			</div>
-			<div class="social">
+			<div id="social">
 				Share your score
 				<img src="images/facebook.png" alt="facebook">
 				<img src="images/twitter.png" alt="twitter">
@@ -120,7 +120,7 @@ session_start();
 			</div>
 		</div>
 
-		<div class="scores">
+		<div id="scores">
 			<h2> High Scores </h2>
 			<ul id="high_scores">
 				<li><strong>The Triumphant Top 20:</strong></li>
@@ -212,7 +212,11 @@ session_start();
 			</figure>
 		</div>
 			
-		<div class="comment_section">
+
+	</div>
+	
+	<div id="comment_wrapper">
+		<div id="comment_section">
 			<div id="comForm">
 				<form id="commentForm" action="addComments.php" method="POST">
 					<textarea name="comment" form="commentForm">Enter comment here...</textarea>
@@ -235,11 +239,10 @@ session_start();
 
 					</tbody> 
 				</table>
-			</div> 
-
+			</div>
 		</div>
 	</div>
-
+	
 	<footer>
 			<a href="index.php">Home</a> | <a href="index.php">Arcade</a> | <a href="index.php">Strategy</a> | <a href="index.php">Puzzle</a> | <a href="index.php">Multiplayer</a><br/><br/>
 			<a href="index.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
