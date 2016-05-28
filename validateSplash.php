@@ -16,8 +16,9 @@ session_start();
 		}
 		$_SESSION['score'] += 250;
 		unset($_SESSION['map']);
-		echo $_SESSION['score'];
+		echo "yay";
 	}
+	echo "blargh";
 
 	function flood($i, $t, $r) {
 		if($map[$i]!=$t) { return; }
