@@ -27,7 +27,7 @@ setInterval(function(){
 			th.append($("<td class='comment'>" + comments.comment + "</td>")); 
 			table.append(th);
 		}; 
-})}, 200);
+})}, 1500);
 
 function eraseText() {
 	

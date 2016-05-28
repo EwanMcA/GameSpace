@@ -5,7 +5,7 @@ $(document).ready(function(){
 		for(var i in json_result) {
 			var comments = json_result[i];
 			var th = $("<tr></tr>");
-			th.append($("<td class='time'>" + JSON.stringify(comments.timestamp) + "</td>"));
+			th.append($("<td class='timestamp'>" + comments.timestamp) + "</td>"));
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
 			th.append($("<td class='comment'>" + comments.comment + "</td>")); 
 			table.append(th);
@@ -21,12 +21,12 @@ setInterval(function(){
 		for(var i in json_result) {
 			var comments = json_result[i];
 			var th = $("<tr></tr>");
-			th.append($("<td class='time'>" + JSON.stringify(comments.timestamp) + "</td>"));
+			th.append($("<td class='timestamp'>" + comments.timestamp + "</td>"));
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
 			th.append($("<td class='comment'>" + comments.comment + "</td>")); 
 			table.append(th);
 		}; 
-})}, 200);
+})}, 1500);
 
 function eraseText() {
 	

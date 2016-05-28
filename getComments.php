@@ -4,7 +4,7 @@
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	$sql = "SELECT userName, comment FROM comments WHERE game = 'snake'";
+	$sql = "SELECT timestamp, userName, comment FROM comments WHERE game = 'snake'";
 	$result = $conn->query($sql);
 
 	$json_result=array();
