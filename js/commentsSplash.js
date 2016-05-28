@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$.get("getSplashComments.php", function(result){
+	$.get("getCommentsSplash.php", function(result){
 		var table = $("#commentBox");
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
@@ -14,7 +14,7 @@ $(document).ready(function(){
 });
 
 setInterval(function(){
-	$.get("getSplashComments.php", function(result){
+	$.get("getCommentsSplash.php", function(result){
 		$("#commentBox").empty();
 		var table = $("#commentBox");
 		var json_result = JSON.parse(result);
