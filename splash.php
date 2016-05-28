@@ -259,7 +259,7 @@ session_start();
 			<a href="index.php">Home</a> | <a href="arcade.php">Arcade</a> | <a href="strategy.php">Strategy</a> | <a href="puzzle.php">Puzzle</a> | <a href="multiplayer.php">Multiplayer</a><br/><br/>
 			<a href="topGames.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
 	</footer>
-	<script src="js/phaser.min.js"</script>
+	<script src="js/phaser.min.js"></script>
 	<script src="js/splash.js"></script>
 	<script src="js/jquery-1.12.3.min.js"></script> 
 	<script src="js/comments.js"></script>
