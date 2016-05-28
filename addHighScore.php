@@ -1,6 +1,9 @@
 <?php
 session_start();
 	include 'database_info.php';
+	if ($_SESSION['game'] === 'snake') {
+		$_SESSION['score'] = 600;
+	}
 	if ($_SESSION['score'] > 0) {
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		
