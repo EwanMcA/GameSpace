@@ -4,7 +4,7 @@ var login = document.getElementById("login");
 var addModal = document.getElementById('addModal');
 var addUser = document.getElementById("addUser"); 
 var span = document.getElementsByClassName("close")[0];
-var spanTwo = document.getElementsByClassName("close")[0];
+var spanTwo = document.getElementsByClassName("close")[1];
 login.onclick = function() {
     loginModal.style.display = "block";
 } 
