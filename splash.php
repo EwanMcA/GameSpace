@@ -231,7 +231,7 @@ session_start();
 		<div id="comment_section">
 			
 			<div id="comForm">
-				<form id="commentForm" action="addComments.php" method="POST">
+				<form id="commentForm" action="addSplashComments.php" method="POST">
 					<textarea id="commentTextbox" name="comment" form="commentForm" onclick = "eraseText()">Enter comment here...</textarea>
 					<input type="submit" value="Post">
 				</form>  
@@ -262,7 +262,7 @@ session_start();
 	<script src="js/phaser.min.js"></script>
 	<script src="js/splash.js"></script>
 	<script src="js/jquery-1.12.3.min.js"></script> 
-	<script src="js/comments.js"></script>
+	<script src="js/commentsSplash.js"></script>
 	<script src="js/login.js"></script>
 </body>
 
