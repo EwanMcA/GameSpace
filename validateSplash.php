@@ -1,14 +1,10 @@
 <?php
 session_start();
 	$map = str_split($_SESSION['map']);
-	// check the posted turn-data
-	// run flood algorithm against map with these turns.
-	/// and post the high score to database. in diff php script.
 	$turnstring = $_REQUEST["t"];
-	echo $turnstring;
 	$turns = str_split($turnstring);
 	for ($i=0; $i < strlen($turnstring); $i++) {
-		flood(0, $map[0],$turns[$i])
+		flood(0, $map[0],$turns[$i]);
 	}
 	if (finished()) {
 		if(!isset($_SESSION['score'])) {
