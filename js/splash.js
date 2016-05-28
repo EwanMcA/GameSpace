@@ -25,7 +25,7 @@ var max_turns = 30;
 var turns_left = max_turns;
 var level = 0;
 var arial;
-var turns;
+var turns = '';
 var xhttp = new XMLHttpRequest();
 
 function preload() {
