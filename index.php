@@ -1,49 +1,58 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>GameSpace</title>
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
-	<link rel="icon" href="img/gs.png" type="image/x-icon">
-	<script src="js/phaser.min.js"></script> 
-	
+	<link rel="stylesheet" type="text/css" href="styles/snake.css">
+	<link rel="icon" href="images/gs.png" type="image/x-icon">
 </head>
+
 <body>
 	<header>
-		<div id="banner">
+		
+		<div id="header_logo">
 			<a href="index.php" >
-				<img id="titleIcon" alt="titleIcon" src="./img/titleIcon.png">
-			</a> 
-				<img id="bannerBG" alt="bannerImg" src="./img/banner.png" >
+				<img id="logo" alt="GameSpace Logo" src="./images/headerLogo.png">
+			</a>
 		</div>
-
-		<nav id="nav">
-			<ul class="navbar">
-				<li> <a href="index.php"> Shooters </a> </li>
-				<li> <a href="index.php"> Driving </a> </li>
-				<li> <a href="index.php"> Strategy </a> </li>
-				<li> <a href="index.php"> Multiplayer </a> </li>
-				<li> <a href="index.php"> Top Games </a> </li>
+		
+		<div id="header_top">
+			<div id="buttons">
+				<button id="login" class="account_button"> Log In </button>
+				<button id="addUser" class="account_button">New User</button>
+				<div id="user">
+					<?php
+						if (isset($_SESSION['user'])){ 
+							echo "Hello ".$_SESSION['user']."!";
+						}
+					?>
+				</div>
+			</div> 
+		</div>
+		
+		<nav>
+			<ul id="navbar">
+				<li> <a href="arcade.php"> Arcade </a> </li>
+				<li> <a href="strategy.php"> Strategy </a> </li>
+				<li> <a href="index.php"> Puzzle </a> </li>
+				<li> <a href="Multiplayer.php"> Multiplayer </a> </li>
+				<li> <a href="topGames.php"> Top Games </a> </li>
 			</ul>
 		</nav>
 		
-		<div id="buttons">
-			<button id="login"> Log In </button><button id="addUser">New User</button>
-			<div id="user"><?php
-				if (isset($_SESSION['user'])){ 
-					echo "Hello ".$_SESSION['user']."!";
-				}
-				?></div>
-		</div> 
 		<div id="loginModal" class="modal">
 			<div class="loginContent">
 				<span class="close">x</span> 
 				<br>
-				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
+				<img alt="titleIcon" src="./images/titleIcon.png">
 				<h1>LOGIN</h1>
 				<form name="login" action="login.php" method="POST"> 
 				Username:<br>
@@ -51,27 +60,27 @@ session_start();
 				Password:<br> 
 				<input type="password" name="password"><br> 
 				<br>
-				<input type="submit" value="Submit"> 
+				<input type="submit" value="Login"> 
 				</form>  
-				<?php
-				if (isset($_SESSION['errors'])){
-					echo '<style type="text/css">
-				        #loginModal {
-				            display: Block;
-				        }
-				        </style>';
-				    echo $_SESSION['errors'];
-				    unset($_SESSION['errors']);
-				}
-				?>
-				
+					<?php
+						if (isset($_SESSION['errors'])){
+							echo '<style type="text/css">
+								#loginModal {
+									display: Block;
+								}
+								</style>';
+							echo "Username or Password is Incorrect";
+							unset($_SESSION['errors']);
+						}
+					?>
 			</div>
 		</div> 
+		
 		<div id="addModal" class="modal">
 			<div class="addContent">
-				<span class="closeAdd">x</span> 
+				<span class="close">x</span> 
 				<br>
-				<img id="loginIcon" alt="titleIcon" src="./img/titleIcon.png">
+				<img alt="titleIcon" src="./images/titleIcon.png">
 				<h1>New User</h1>
 				<form name="addUser" action="add_user.php" method="POST"> 
 				Username:<br>
@@ -81,70 +90,128 @@ session_start();
 				<br>
 				<input type="submit" value="Submit"> 
 				</form>
-				<?php
-				if (isset($_SESSION['errors'])){
-					echo '<style type="text/css">
-				        #addModal {
-				            display: Block;
-				        }
-				        </style>';
-				    echo $_SESSION['errors'];
-				    unset($_SESSION['errors']);
-				}
-				?>
+					<?php
+						if (isset($_SESSION['errors'])){
+							echo '<style type="text/css">
+								#addModal {
+									display: Block;
+								}
+								</style>';
+							echo "Name not available.";
+							unset($_SESSION['errors']);
+						}
+					?>
 			</div>
 		</div>
 	</header>
 
-	<div id="left_menu">
-		<figure>
-			<a href="snake.php">
-				<img src="img/blockSnake.png" alt="BlockSnake">
-			</a>
-			<figCaption>
+	<div id="home_content">
+		
+		<div id="trending_games">
+			<h1>Trending Games <h1>
+			<figure>
 				<a href="snake.php">
-					 Block Snake - by Real Games 
+					<img src="images/blockSnake.png" alt="BlockSnake">
 				</a>
-			</figCaption>
-		</figure>
-		<br>
-		<figure>
-			<a href="splash.php">
-				<img src="img/cuber.jpg" alt="Splash">
-			</a>
-			<figCaption>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+				
+			<figure>
 				<a href="splash.php">
-					 Splash - by PuzzleWorld 
+					<img src="images/cuber.jpg" alt="Splash">
 				</a>
-			</figCaption>
-		</figure>
-	</div>
-
-	<div id="game_container">
-		<div id="my_score">
-		Current Score: 0
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
 		</div>
-		<div id="game_window">
-			<div id="box">
-			</div>
-		</div>
-		<div class="social">
-			Share your score
-			<img src="img/fb.png" alt="facebook">
-			<img src="img/twitter.png" alt="twitter">
+		
+		<h2>More games</h2>
+		<div id="more_games">
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
 		</div>
 	</div>
+	
+	<footer>
+			<a href="index.php">Home</a> | <a href="index.php">Arcade</a> | <a href="index.php">Strategy</a> | <a href="index.php">Puzzle</a> | <a href="index.php">Multiplayer</a><br/><br/>
+			<a href="index.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
+	</footer>
 
-	<div class="scores">
-		<strong> High Scores </strong>
-		<ul id="high_scores">
-			<li> Lilly: 920 </li>
-			<li> Blake: 852 </li>
-		</ul>
-	</div>
-
-<script src="js/loading_screen.js"></script> 
-<script src="js/login.js"></script>
-
+	<script src="js/game.js"></script> 
+	<script src="js/jquery-1.12.3.min.js"></script> 
+	<script src="js/comments.js"></script>
+	<script src="js/login.js"></script>
 </body>
+
 </html>

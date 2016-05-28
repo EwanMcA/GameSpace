@@ -105,7 +105,7 @@ session_start();
 		</div>
 	</header>
 
-	<div id="main_content">
+	<div id="game_content">
 
 		<div id="game_container">
 			<h1>Block Snake</h1>
