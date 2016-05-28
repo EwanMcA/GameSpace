@@ -27,3 +27,10 @@ setInterval(function(){
 			table.append(th);
 		}; 
 })}, 200);
+
+function eraseText() {
+	
+	if (document.getElementById("commentTextbox").value === "Enter comment here...") {
+        document.getElementById("commentTextbox").value = "";
+    }
+}
