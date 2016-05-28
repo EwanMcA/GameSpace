@@ -192,6 +192,7 @@ function actionOnClick(button) {
 		xhttp.send();
 		$a = xhttp.responseText;
 		console.log($a);
+		//aaaaaaaa
 		level++;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
