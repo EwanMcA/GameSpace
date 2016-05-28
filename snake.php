@@ -10,7 +10,7 @@ session_start();
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>GameSpace</title>
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="styles/main2.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/snake.css">
 	<link rel="icon" href="images/gs.png" type="image/x-icon">
 </head>
