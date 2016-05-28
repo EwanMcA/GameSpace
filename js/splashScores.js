@@ -4,11 +4,9 @@ $(document).ready(function(){
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
 			var comments = json_result[i]; 
-			var s = comments.score; 
-			var scoreString = JSON.stringify(s);
 			var th = $("<tr></tr>");
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
-			th.append($("<td class='score'>" + scoreString+ "</td>")); 
+			th.append($("<td class='score'>" + comments.score + "</td>")); 
 			table.append(th);
 		}; 
 	});

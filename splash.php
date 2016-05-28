@@ -131,7 +131,7 @@ session_start();
 				<table>
 					<thead>
 						<tr>
-							<td">User</td>
+							<td>User</td>
 							<td>Score</td>
 						</tr>
 					</thead>
