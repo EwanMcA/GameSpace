@@ -6,7 +6,7 @@ $(document).ready(function(){
 			var comments = json_result[i];
 			var th = $("<tr></tr>");
 			th.append($("<td class='user'>" + comments.userName + "</td>"));
-			th.append($("<td class='score'>" + (comments.score.toString();) + "</td>")); 
+			th.append($("<td class='score'>" + comments.score.toString(); + "</td>")); 
 			table.append(th);
 		}; 
 	});
