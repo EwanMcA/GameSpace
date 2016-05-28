@@ -127,11 +127,13 @@ session_start();
 			</div>
 		</div>
 
-		<div id="scores"> 
+		<div id="scores">
+			<h2> High Scores </h2>
+			<div id="scores_list">
 				<table>
 					<thead>
 						<tr>
-							<td">User</td>
+							<td>User</td>
 							<td>Score</td>
 						</tr>
 					</thead>
@@ -139,6 +141,7 @@ session_start();
 
 					</tbody> 
 				</table>
+			</div>
 		</div>
 		
 		<div id="more_games">
