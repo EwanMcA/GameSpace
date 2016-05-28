@@ -195,8 +195,9 @@ function actionOnClick(button) {
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
 		restart();
 	} else if (turns_left < 1) {
-		xhttp.open("GET", "addHighScore.php", true); 
+		xhttp.open("GET", "addHighScore.php", false); 
 		xhttp.send();
+		console.log(xhttp.responseText);
 		level = 0;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;

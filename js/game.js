@@ -100,7 +100,6 @@ function box_death() {
 	if (tail.length > 1) {
 		xhttp.open("GET", "addHighScore.php", false); 
 		xhttp.send();
-		console.log(xhttp.responseText);
 	}
 	x = half_width;
 	y = half_height;
