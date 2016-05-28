@@ -11,6 +11,9 @@ session_start();
 		flood(0, $map[0],$turns[$i])
 	}
 	if (finished()) {
+		if(!isset($_SESSION['score'])) {
+			$_SESSION['score'] = 0;
+		}
 		$_SESSION['score'] += 250;
 		unset($_SESSION['map']);
 		echo $_SESSION['score'];
