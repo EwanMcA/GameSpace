@@ -104,6 +104,8 @@ function box_death() {
 	    tail_parts[0].parentNode.removeChild(tail_parts[0]);
 	}
 	document.getElementById("my_score").innerHTML = "Current Score: " + tail.length*50;
+	xhttp.open("GET", "addHighScore.php", true); 
+	xhttp.send();
 }
 
 function place_food() {

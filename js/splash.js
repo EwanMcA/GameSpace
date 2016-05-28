@@ -188,15 +188,15 @@ function actionOnClick(button) {
 	turns_left-=1;
 	turn_text.text = "Turns Left: "+turns_left;
 	if (all_filled()) {
-		xhttp.open("GET", "validateSplash.php?t="+turns, false); 
+		xhttp.open("GET", "validateSplash.php?t="+turns, true); 
 		xhttp.send();
-		$a = xhttp.responseText;
 		level++;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
 		restart();
 	} else if (turns_left < 1) {
-			// php to update high-scores.
+		xhttp.open("GET", "addHighScore.php", true); 
+		xhttp.send();
 		level = 0;
 		level_text.text = "Level "+level;
 		document.getElementById("my_score").innerHTML = "Current Score: " + level*250;
