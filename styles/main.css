@@ -90,6 +90,28 @@ thead {
 	font-weight: bold;
 }
 
+#arcade_content {
+	background: white;
+	height: 870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#arcade_content  h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
+#arcade_content #more_games {
+	border: 4px solid #00A1E9;
+    height: 790px;
+    width: 865px;
+    border-radius: 25px;
+	margin-left: 70px;
+    margin-top: 5px;
+	font-size: 1em;
+}
+
 #buttons {
 	float: right;
 	width: 200px;
@@ -177,10 +199,16 @@ thead {
 
 #home_content {
 	background: white;
-	height: 770px;
+	height: 800px;
 	width: 1010px;
 	margin: 10px auto 0px auto;
 }
+
+#home_content h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
 #home_content #more_games {
 	border: 4px solid #00A1E9;
     height: 145px;
@@ -190,40 +218,6 @@ thead {
 	margin-left: 70px;
     margin-top: 5px;
 	font-size: 1em;
-}
-
-#home_content h2{
-	margin: 50px 0px 0px 70px;
-}
-
-#trending_games {
-	margin: 0px 0px 0px 60px;
-	padding-top: 5px;
-}
-
-#trending_games a:visited {
-	color: blue;
-}
-
-#trending_games figure:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	background: #c1e8f9;
-}
-
-#trending_games figure {
-	margin: 0px 0px 0px 50px;
-	text-align: center;
-	display: inline-block;
-	padding: 30px;
-	border: 1px solid grey;
-	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
-}
-
-#trending_games img {
-	width: 300px;
-	height: 300px;
-	border: 1px solid grey;
 }
 
 #logo {
@@ -254,7 +248,7 @@ thead {
 }
 
 #more_games figure {
-	margin: 15px 0px 0px 38px;
+	margin: 15px 0px 0px 36px;
 	padding-bottom: 15px;
 	float: left;
 	text-align: center;
@@ -268,6 +262,28 @@ thead {
 
 #more_games img:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#multiplayer_content {
+	background: white;
+	height: 870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#multiplayer_content  h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
+#multiplayer_content #more_games {
+	border: 4px solid #00A1E9;
+    height: 790px;
+    width: 865px;
+    border-radius: 25px;
+	margin-left: 70px;
+    margin-top: 5px;
+	font-size: 1em;
 }
 
 #my_score {
@@ -303,6 +319,28 @@ thead {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+#puzzle_content {
+	background: white;
+	height: 870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#puzzle_content  h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
+#puzzle_content #more_games {
+	border: 4px solid #00A1E9;
+    height: 790px;
+    width: 865px;
+    border-radius: 25px;
+	margin-left: 70px;
+    margin-top: 5px;
+	font-size: 1em;
+}
+
 #scores {
 	float: right;
 	width: 300px;
@@ -323,6 +361,80 @@ thead {
 	padding-left:12px;
 	width: 25px;
 	height: 25px;
+}
+
+#strategy_content {
+	background: white;
+	height: 870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#strategy_content  h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
+#strategy_content #more_games {
+	border: 4px solid #00A1E9;
+    height: 790px;
+    width: 865px;
+    border-radius: 25px;
+	margin-left: 70px;
+    margin-top: 5px;
+	font-size: 1em;
+}
+
+#topGames_content {
+	background: white;
+	height: 870px;
+	width: 1010px;
+	margin: 10px auto 0px auto;
+}
+
+#topGames_content  h2{
+	margin: 0px 0px 0px 70px;
+	padding-top: 10px;
+}
+
+#topGames_content #more_games {
+	border: 4px solid #00A1E9;
+    height: 790px;
+    width: 865px;
+    border-radius: 25px;
+	margin-left: 70px;
+    margin-top: 5px;
+	font-size: 1em;
+}
+
+#trending_games {
+	margin: 0px 0px 0px 60px;
+	padding-top: 5px;
+}
+
+#trending_games a:visited {
+	color: blue;
+}
+
+#trending_games figure:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	background: #c1e8f9;
+}
+
+#trending_games figure {
+	margin: 0px 0px 0px 50px;
+	text-align: center;
+	display: inline-block;
+	padding: 30px;
+	border: 1px solid grey;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#trending_games img {
+	width: 300px;
+	height: 300px;
+	border: 1px solid grey;
 }
 
 .account_button {

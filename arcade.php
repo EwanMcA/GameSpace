@@ -104,10 +104,10 @@ session_start();
 		</div>
 	</header>
 
-	<div id="home_content">
+	<div id="arcade_content">
 		
-		<div id="trending_games">
-			<h1>Trending Games <h1>
+		<h2>Arcade games</h2>
+		<div id="more_games">
 			<figure>
 				<a href="snake.php">
 					<img src="images/blockSnake.png" alt="BlockSnake">
@@ -118,7 +118,7 @@ session_start();
 					</a>
 				</figCaption>
 			</figure>
-				
+			
 			<figure>
 				<a href="splash.php">
 					<img src="images/cuber.jpg" alt="Splash">
@@ -129,10 +129,249 @@ session_start();
 					</a>
 				</figCaption>
 			</figure>
-		</div>
-		
-		<h2>More games</h2>
-		<div id="more_games">
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="splash.php">
+					<img src="images/cuber.jpg" alt="Splash">
+				</a>
+				<figCaption>
+					<a href="splash.php">
+						 Splash 
+					</a>
+				</figCaption>
+			</figure>
+			
+			<figure>
+				<a href="snake.php">
+					<img src="images/blockSnake.png" alt="BlockSnake">
+				</a>
+				<figCaption>
+					<a href="snake.php">
+						 Block Snake
+					</a>
+				</figCaption>
+			</figure>
+			
 			<figure>
 				<a href="snake.php">
 					<img src="images/blockSnake.png" alt="BlockSnake">

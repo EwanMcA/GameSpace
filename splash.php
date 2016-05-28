@@ -41,8 +41,8 @@ session_start();
 			<ul id="navbar">
 				<li> <a href="arcade.php"> Arcade </a> </li>
 				<li> <a href="strategy.php"> Strategy </a> </li>
-				<li> <a href="index.php"> Puzzle </a> </li>
-				<li> <a href="Multiplayer.php"> Multiplayer </a> </li>
+				<li> <a href="puzzle.php"> Puzzle </a> </li>
+				<li> <a href="multiplayer.php"> Multiplayer </a> </li>
 				<li> <a href="topGames.php"> Top Games </a> </li>
 			</ul>
 		</nav>
@@ -256,8 +256,8 @@ session_start();
 	</div>
 	
 	<footer>
-			<a href="index.php">Home</a> | <a href="index.php">Arcade</a> | <a href="index.php">Strategy</a> | <a href="index.php">Puzzle</a> | <a href="index.php">Multiplayer</a><br/><br/>
-			<a href="index.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
+			<a href="index.php">Home</a> | <a href="arcade.php">Arcade</a> | <a href="strategy.php">Strategy</a> | <a href="puzzle.php">Puzzle</a> | <a href="multiplayer.php">Multiplayer</a><br/><br/>
+			<a href="topGames.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
 	</footer>
 	
 	<script src="js/splash.js"></script>
