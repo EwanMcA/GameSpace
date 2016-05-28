@@ -46,6 +46,7 @@ var dir = 0;
 var food_x = 0;
 var food_y = 0;
 var tail = [];
+var xhttp = new XMLHttpRequest();
 var box = document.getElementById("box");
 
 function move_box() {
@@ -105,8 +106,9 @@ function box_death() {
 	}
 	document.getElementById("my_score").innerHTML = "Current Score: " + tail.length*50;
 	if (tail.length > 1) {
-		xhttp.open("GET", "addHighScore.php", true); 
+		xhttp.open("GET", "addHighScore.php", false); 
 		xhttp.send();
+		console.log(xhttp.responseText);
 	}
 }
 

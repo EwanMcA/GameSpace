@@ -13,8 +13,10 @@ session_start();
 		$highScore = $_SESSION['score'];
 		$userName = $_SESSION['user'];
 		$game = $_SESSION['game'];
+		echo $highScore . $userName . $game; 
 		unset($_SESSION['score']);
 		
+
 		$stmt->execute();
 
 		$stmt->close();
