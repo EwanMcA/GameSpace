@@ -134,7 +134,7 @@ session_start();
 				<table>
 					<thead>
 						<tr>
-							<td style="width:120px">User</td>
+							<td>User</td>
 							<td>Score</td>
 						</tr>
 					</thead>
