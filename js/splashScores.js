@@ -11,4 +11,4 @@ function fill_scores(){
 		}; 
 	});
 }
-$(document).ready(fill_scores);
+$(document).ready(fill_scores());
