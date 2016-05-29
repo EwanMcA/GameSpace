@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.get("getCommentsSplash.php", function(result){  
-		console.log(result);
+		
 		var table = $("#commentBox");
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
