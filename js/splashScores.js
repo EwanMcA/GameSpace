@@ -1,6 +1,7 @@
 function fill_scores(){
 	$.get("getSplashScores.php", function(result){
 		var table = $("#scoresBox");
+		table.empty();
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
 			var scores = json_result[i]; 

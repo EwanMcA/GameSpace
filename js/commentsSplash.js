@@ -16,8 +16,8 @@ $(document).ready(function(){
 
 setInterval(function(){
 	$.get("getCommentsSplash.php", function(result){
-		$("#commentBox").empty();
 		var table = $("#commentBox");
+		table.empty();
 		var json_result = JSON.parse(result);
 		for(var i in json_result) {
 			var comments = json_result[i];
