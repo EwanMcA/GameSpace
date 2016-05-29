@@ -27,7 +27,7 @@ $_SESSION['game'] = 'splash';
 		
 		<div id="header_top">
 			<div id="buttons">
-				<button id="login" class="account_button"> Log In </button>
+				<button id="login" class="account_button">Login</button>
 				<button id="addUser" class="account_button">New User</button>
 				<div id="user">
 					<?php
