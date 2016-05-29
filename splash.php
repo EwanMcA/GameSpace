@@ -238,7 +238,7 @@ $_SESSION['game'] = 'splash';
 				<table>
 					<thead>
 						<tr>
-							<td style="width:60px">Time</td>
+							<td style="width:120px">Time</td>
 							<td style="width:120px">By</td>
 							<td>Comment</td>
 						</tr>
