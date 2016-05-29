@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function fill_scores(){
 	$.get("getSplashScores.php", function(result){
 		var table = $("#scoresBox");
 		var json_result = JSON.parse(result);
@@ -10,4 +10,5 @@ $(document).ready(function(){
 			table.append(th);
 		}; 
 	});
-});
+}
+$(document).ready(fill_scores);

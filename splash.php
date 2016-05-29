@@ -257,11 +257,11 @@ $_SESSION['game'] = 'splash';
 			<a href="topGames.php">Top Games</a>  | website by <a href="index.php">GameSpace.inc</a>
 	</footer>
 	<script src="js/phaser.min.js"></script>
+	<script src="js/splashScores.js"></script>
 	<script src="js/splash.js"></script>
 	<script src="js/jquery-1.12.3.min.js"></script> 
 	<script src="js/commentsSplash.js"></script>
 	<script src="js/login.js"></script> 
-	<script src="js/splashScores.js"></script>
 </body>
 
 </html>
