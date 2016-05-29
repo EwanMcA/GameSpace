@@ -10,7 +10,7 @@ session_start();
 		if(!isset($_SESSION['score'])) {
 			$_SESSION['score'] = 0;
 		}
-		$_SESSION['score'] += 250;
+		$_SESSION['score'] = 250;
 		unset($_SESSION['map']);
 	}
 
