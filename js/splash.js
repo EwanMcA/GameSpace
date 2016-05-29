@@ -188,7 +188,7 @@ function actionOnClick(button) {
 	turns_left-=1;
 	turn_text.text = "Turns Left: "+turns_left;
 	if (all_filled()) {
-		xhttp.open("GET", "validateSplash.php?t="+turns, true); 
+		xhttp.open("GET", "validateSplash.php?t="+turns, false); 
 		xhttp.send();
 		level++;
 		level_text.text = "Level "+level;
