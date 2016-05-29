@@ -14,6 +14,7 @@ $_SESSION['game'] = 'snake';
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/snake.css">
 	<link rel="icon" href="images/gs.png" type="image/x-icon">
+	<script src="js/login.js"></script>
 </head>
 
 <body>
@@ -36,6 +37,13 @@ $_SESSION['game'] = 'snake';
 						}
 					?>
 				</div>
+				<script type="text/javascript">
+					<?php
+						if (isset($_SESSION['user'])){
+							echo "updateBtnLogout();";
+						}
+					?>
+				</script>
 			</div> 
 		</div>
 		

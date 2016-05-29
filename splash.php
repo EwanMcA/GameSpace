@@ -13,6 +13,7 @@ $_SESSION['game'] = 'splash';
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="icon" href="images/gs.png" type="image/x-icon">
+	<script src="js/login.js"></script>
 </head>
 
 <body>
@@ -35,6 +36,13 @@ $_SESSION['game'] = 'splash';
 						}
 					?>
 				</div>
+				<script type="text/javascript">
+					<?php
+						if (isset($_SESSION['user'])){
+							echo "updateBtnLogout();";
+						}
+					?>
+				</script>
 			</div> 
 		</div>
 		

@@ -451,7 +451,6 @@ textarea[name=comment] {
 
 #user {
 	margin-top: 5px;
-	border: 3px solid #0070a3;
 	background-color: white;
 	text-align: center;
 	color: #333333;
@@ -517,6 +516,10 @@ textarea[name=comment] {
     cursor: pointer;
 } 
 
+.modal input{
+	margin: 0px;
+}
+
 .modal {
     display: none; 
     position: fixed; 
@@ -528,6 +531,3 @@ textarea[name=comment] {
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 }
-
-
-
