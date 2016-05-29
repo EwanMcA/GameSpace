@@ -4,7 +4,7 @@
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	$sql = "SELECT userName, highScore FROM highscores WHERE game = 'snake' ORDER BY highScore DESC LIMIT 20 "; 
+	$sql = "SELECT userName, highScore FROM highscores WHERE game = 'snake' ORDER BY highScore DESC LIMIT 5 "; 
 	$result = $conn->query($sql);
 
 	$json_result=array();
