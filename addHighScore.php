@@ -2,7 +2,7 @@
 session_start();
 	include 'database_info.php';
 	// works when you feed it a high score.
-	//if (intval($_SESSION['score']) > 0) {
+	if (intval($_SESSION['score']) > 0) {
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		
 		$stmt = $conn->prepare("INSERT INTO highscores(highScore, userName, game) VALUES(?, ?, ?)");
@@ -19,6 +19,6 @@ session_start();
 
 		$stmt->close();
 		mysqli_close($conn);
-	//}
+	}
 
 ?>
