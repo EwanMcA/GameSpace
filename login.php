@@ -6,11 +6,11 @@ session_start();
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
 	$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?");
-	$stmt->bind_param("ss", $userName, $unhashed);
+	$stmt->bind_param("ss", $userName, $password);
 
 	$userName = $_POST['userName'];
 	$unhashed = $_POST['password'];
-	$password = password_hash($unhashed, PASSWORD_DEFAULT)."\n";
+	$password = password_hash($unhashed, PASSWORD_DEFAULT);
 	
 	$stmt->execute();
 	$stmt->store_result();
