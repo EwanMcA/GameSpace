@@ -99,14 +99,14 @@ $_SESSION['game'] = 'splash';
 				<input type="submit" value="Submit"> 
 				</form>
 					<?php
-						if (isset($_SESSION['errors'])){
+						if (isset($_SESSION['nameError'])){
 							echo '<style type="text/css">
 								#addModal {
 									display: Block;
 								}
 								</style>';
 							echo "Name not available.";
-							unset($_SESSION['errors']);
+							unset($_SESSION['nameError']);
 						}
 					?>
 			</div>
