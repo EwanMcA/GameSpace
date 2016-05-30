@@ -14,7 +14,7 @@ session_start();
 	$stmt->bind_param("ss", $userName, $password);
 
 	$userName = $_POST['userName'];
-	$password = $_POST['password']; 
+	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
