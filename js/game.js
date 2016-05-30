@@ -97,10 +97,10 @@ function move_box() {
 }
 
 function box_death() {
-	if (tail.length > 1) {
-		xhttp.open("GET", "addHighScore.php", false); 
-		xhttp.send();
-	}
+	// if (tail.length > 1) {
+	// 	xhttp.open("GET", "addHighScore.php", false); 
+	// 	xhttp.send();
+	// }
 	x = half_width;
 	y = half_height;
 	tail = [];
