@@ -5,20 +5,24 @@ session_start();
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?");
-	$stmt->bind_param("ss", $userName, $password);
+	//$stmt = $conn->prepare("SELECT userName FROM users WHERE userName=? AND password=?");
+	$stmt = $conn->prepare("SELECT userName, password FROM users WHERE userName=?");
+	$stmt->bind_param("s", $userName);
 
 	$userName = $_POST['userName'];
 	$unhashed = $_POST['password'];
-	$password = password_hash($unhashed, PASSWORD_DEFAULT);
 	
 	$stmt->execute();
 	$stmt->store_result();
 	$num_rows = $stmt->num_rows;
-	$stmt->bind_result($username);
+	$stmt->bind_result($username, $hash);
 	$stmt->fetch();
 	if ($num_rows > 0) {
-		$_SESSION['user'] = $username;
+		if (password_verify($unhashed, $hash)) {
+			$_SESSION['user'] = $username;
+		} else {
+			$_SESSION['errors'] = array("Incorrect Username or Password");
+		}
     } 
 	else if ($num_rows < 1) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
