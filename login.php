@@ -9,7 +9,8 @@ session_start();
 	$stmt->bind_param("ss", $userName, $password);
 
 	$userName = $_POST['userName'];
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	$unhashed = $_POST['password'];
+	$password = password_hash($unhashed, PASSWORD_DEFAULT);
 	
 	$stmt->execute();
 	$stmt->store_result();
