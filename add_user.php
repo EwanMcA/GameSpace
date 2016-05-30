@@ -11,11 +11,11 @@ session_start();
 	// } 
 	
 	$stmt = $conn->prepare("INSERT INTO users(userName, password) VALUES(?, ?)");
-	$stmt->bind_param("ss", $userName, $password);
+	$stmt->bind_param("ss", $userName, $unhashed);
 
 	$userName = $_POST['userName'];
 	$unhashed = $_POST['password'];
-	$password = password_hash($unhashed, PASSWORD_DEFAULT);
+	//$password = password_hash($unhashed, PASSWORD_DEFAULT);
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
