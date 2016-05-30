@@ -15,7 +15,7 @@ session_start();
 
 	$userName = $_POST['userName'];
 	$unhashed = $_POST['password'];
-	//$password = password_hash($unhashed, PASSWORD_DEFAULT);
+	$password = password_hash($unhashed, PASSWORD_DEFAULT)."\n";
 	
 	if (!$stmt->execute()) {
 	    // echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
